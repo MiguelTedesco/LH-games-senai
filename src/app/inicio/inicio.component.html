@@ -1,0 +1,115 @@
+<main>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('./assets/img/banner1.PNG')">
+        <div class="carousel-caption">
+          <h5>Diversos consoles</h5>
+          <p>Jogue na plataforma que quiser.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('./assets/img/banner2.PNG')">
+        <div class="carousel-caption">
+          <h5>Setups de todas as categorias</h5>
+          <p>Monte de acordo com suas preferências.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('./assets/img/banner3.PNG')">
+        <div class="carousel-caption">
+          <h5>Entre no nosso mundo</h5>
+          <p>A melhor loja na área!</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <h1 class="display-2">Confira nossos produtos!</h1>
+  <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+      <div class="col">
+        <div class="card h-100 shadow-sm"> <img
+            src="./assets/img/jogo1.PNG"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$200</span> <span
+                class="float-end price-hp"></span> </div>
+            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
+              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
+              aliquam sequi.</h5>
+            <div class="text-center my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm"> <img
+            src="./assets/img/jogo2.PNG"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$300;</span>
+              <span class="float-end"></span> </div>
+            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
+              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
+              aliquam sequi.</h5>
+            <div class="d-grid gap-2 my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm"> <img
+            src="./assets/img/jogo3.PNG"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$250;</span>
+              <span class="float-end"></span> </div>
+            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
+              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
+              aliquam sequi.</h5>
+            <div class="text-center my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
+            <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span
+                class="float-end"><i class="fas fa-plus"></i></span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm"> <img
+            src="./assets/img/jogo4.jpg"
+            class="card-img-top" alt="...">
+          <div class="label-top shadow-sm">Pormoção</div>
+          <div class="card-body">
+            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$270;</span>
+              <span class="float-end"></span> </div>
+            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
+              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
+              aliquam sequi.</h5>
+            <div class="text-center my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
+            <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span
+                class="float-end"><i class="fas fa-plus"></i></span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+  $('.carousel').carousel({
+    interval: 6000,
+    pause: "false"
+  });
+
+</script>
