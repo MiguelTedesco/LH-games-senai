@@ -40,71 +40,27 @@
   </div>
 
   <h1 class="display-2">Confira nossos produtos!</h1>
-  <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img
-            src="./assets/img/jogo1.PNG"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$200</span> <span
-                class="float-end price-hp"></span> </div>
-            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
-              aliquam sequi.</h5>
-            <div class="text-center my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img
-            src="./assets/img/jogo2.PNG"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$300;</span>
-              <span class="float-end"></span> </div>
-            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
-              aliquam sequi.</h5>
-            <div class="d-grid gap-2 my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img
-            src="./assets/img/jogo3.PNG"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$250;</span>
-              <span class="float-end"></span> </div>
-            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
-              aliquam sequi.</h5>
-            <div class="text-center my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
-            <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span
-                class="float-end"><i class="fas fa-plus"></i></span> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img
-            src="./assets/img/jogo4.jpg"
-            class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">Pormoção</div>
-          <div class="card-body">
-            <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">R$270;</span>
-              <span class="float-end"></span> </div>
-            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-              eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed
-              aliquam sequi.</h5>
-            <div class="text-center my-4"> <a href="#" class="btn btn-primary">Comprar</a> </div>
-            <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span
-                class="float-end"><i class="fas fa-plus"></i></span> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let produto of produtos">
+      <mat-card class="example-card">
+        <img mat-card-image src="./assets/img/{{produto.foto}}" alt="Jogo 1">
+
+        <mat-card-header>
+          <mat-card-title>{{produto.produto}}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <p>
+            {{produto.descricao}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>{{produto.preco | currency : 'BRL'}}</p>
+          <button mat-button>Comprar</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </main>
 <script>
   $('.carousel').carousel({
